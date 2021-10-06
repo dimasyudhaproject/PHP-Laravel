@@ -24,7 +24,7 @@ There are two steps to run this project:
 ## Prerequisites
 
 Make sure you already setup these three components first in your local PC.
-- [XANPP](https://www.apachefriends.org/download.html) >=3.3.0
+- [XAMPP](https://www.apachefriends.org/download.html) >=3.3.0
 - [Laravel](https://laravel.com/docs/4.2/installation) >=6.20.35
 - [Composer](https://getcomposer.org/download/) >=2.1.9
 
@@ -47,7 +47,6 @@ password: admin
 **2. Live Previewing**
 
 ### ✨ [Demo](https://dimasyudha-dipo.herokuapp.com/login.php)
-
 
 ## Author
 
