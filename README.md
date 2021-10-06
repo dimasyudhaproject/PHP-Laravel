@@ -24,11 +24,14 @@ There are two steps to run this project:
 ## Prerequisites
 
 Make sure you already setup these three components first in your local PC.
-- [xampp](https://www.apachefriends.org/download.html) >=3.3.0
-- [laravel](https://laravel.com/docs/4.2/installation) >=6.20.35
-- [composer](https://getcomposer.org/download/) >=2.1.9
+- [XANPP](https://www.apachefriends.org/download.html) >=3.3.0
+- [Laravel](https://laravel.com/docs/4.2/installation) >=6.20.35
+- [Composer](https://getcomposer.org/download/) >=2.1.9
 
-Then you can run the project locally by typing the address below on your desire web browser.
+Then, please import the dumped DB to your [phpmyadmin](http://localhost/phpmyadmin). This is important and mandatory step that you need to follow!
+- [Dumped DB](https://drive.google.com/file/d/14KtsT7IOudqciUGQJm1ufo7VxbUueUPs/view?usp=sharing)
+
+After that, you can run the project locally by typing the address below on your desire web browser.
 
 ```sh
 http://localhost/login.php
