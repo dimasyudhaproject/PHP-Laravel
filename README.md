@@ -11,7 +11,7 @@
   </a>
 </p>
 
-> This project dedicates to Dipo Star for technical testing purpose which aims to build an admin panel + basic CRUD website application using CSS framework which is Laravel & PHP for back-end service.
+> This project dedicates to Dipo Star for technical testing purpose which aims to build an admin panel + basic CRUD website application using Laravel framework & PHP for back-end service.
 
 ### 🏠 [Homepage](https://github.com/fsdimasyudha)
 
