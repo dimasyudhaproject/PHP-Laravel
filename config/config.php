@@ -26,7 +26,7 @@ require_once BASE_PATH . '/helpers/helpers.php';
 define('DB_HOST', "remotemysql.com");
 define('DB_USER', "TgI7Kv7MKt");
 define('DB_PASSWORD', "MwFsM1PORa");
-define('DB_NAME', "dimasyudha");
+define('DB_NAME', "TgI7Kv7MKt");
 
 /**
  * Get instance of DB object
