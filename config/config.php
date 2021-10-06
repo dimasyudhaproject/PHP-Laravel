@@ -16,9 +16,16 @@ require_once BASE_PATH . '/helpers/helpers.php';
 |--------------------------------------------------------------------------
  */
 
-define('DB_HOST', "localhost");
-define('DB_USER', "root");
-define('DB_PASSWORD', "");
+
+/* IF YOU PREFER TO RUN THIS PROJECT LOCALLY, PLEASE UNCOMMENT ALL THESE CONFIGS BELOW */
+// define('DB_HOST', "localhost");
+// define('DB_USER', "root");
+// define('DB_PASSWORD', "");
+// define('DB_NAME', "dimasyudha");
+
+define('DB_HOST', "remotemysql.com");
+define('DB_USER', "TgI7Kv7MKt");
+define('DB_PASSWORD', "MwFsM1PORa");
 define('DB_NAME', "dimasyudha");
 
 /**
