@@ -71,8 +71,8 @@
                     <div class="navbar-default sidebar" role="navigation">
                         <div class="sidebar-nav navbar-collapse">
                             <ul class="nav" id="side-menu">
-                                <li <?php echo (CURRENT_PAGE == "customers.php" || CURRENT_PAGE == "add_customer.php") ? 'class="active"' : ''; ?>>
-                                    <a href="customers.php"><i class="fa fa-user-circle fa-fw"></i> Dashboard<span></span></a>
+                                <li <?php echo (CURRENT_PAGE == "index.php" || CURRENT_PAGE == "add_customer.php") ? 'class="active"' : ''; ?>>
+                                    <a href="index.php"><i class="fa fa-user-circle fa-fw"></i> Dashboard<span></span></a>
                                 </li>
                             </ul>
                         </div>

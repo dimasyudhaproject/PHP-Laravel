@@ -28,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
     {
         $_SESSION['success'] = "Customer updated successfully!";
         //Redirect to the listing page,
-        header('location: customers.php');
+        header('location: index.php');
         //Important! Don't execute the rest put the exit/die. 
         exit();
     }

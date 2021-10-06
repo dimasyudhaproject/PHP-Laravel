@@ -148,7 +148,7 @@ endforeach;
 
     <!-- Pagination -->
     <div class="text-center">
-    <?php echo paginationLinks($page, $total_pages, 'customers.php'); ?>
+    <?php echo paginationLinks($page, $total_pages, 'index.php'); ?>
     </div>
     <!-- //Pagination -->
 </div>

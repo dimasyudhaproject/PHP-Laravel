@@ -19,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
     if($last_id)
     {
     	$_SESSION['success'] = "Customer added successfully!";
-    	header('location: customers.php');
+    	header('location: index.php');
     	exit();
     }
     else

@@ -6,7 +6,7 @@ $token = bin2hex(openssl_random_pseudo_bytes(16));
 // If User has already logged in, redirect to dashboard page.
 if (isset($_SESSION['user_logged_in']) && $_SESSION['user_logged_in'] === TRUE)
 {
-	header('Location:customers.php');
+	header('Location:index.php');
 }
 
 // If user has previously selected "remember me option": 
@@ -38,7 +38,7 @@ if (isset($_COOKIE['series_id']) && isset($_COOKIE['remember_token']))
 
 			$_SESSION['user_logged_in'] = TRUE;
 			$_SESSION['admin_type'] = $row['admin_type'];
-			header('Location:customers.php');
+			header('Location:index.php');
 			exit;
 		}
 		else
