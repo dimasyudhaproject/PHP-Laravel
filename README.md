@@ -1,8 +1,5 @@
 <h1 align="center">Welcome to PHP & Laravel Admin Panel Website Application 👋</h1>
 <p>
-  <img alt="Version" src="https://img.shields.io/badge/version-0.11-blue.svg?cacheSeconds=2592000" />
-  <img src="https://img.shields.io/badge/npm-%3E%3D5.5.0-blue.svg" />
-  <img src="https://img.shields.io/badge/node-%3E%3D9.3.0-blue.svg" />
   <a href="https://github.com/dimasyudhaproject/dimasyudha/blob/master/README.md" target="_blank">
     <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
   </a>
