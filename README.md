@@ -31,13 +31,22 @@ Make sure you already setup these three components first in your local PC.
 Then, please import the dumped DB to your [phpmyadmin](http://localhost/phpmyadmin). This is important and mandatory step that you need to follow!
 - [Dumped DB](https://drive.google.com/file/d/14KtsT7IOudqciUGQJm1ufo7VxbUueUPs/view?usp=sharing)
 
-After that, you can run the project locally by typing the address below on your desire web browser.
+After that, please open to project directory and modify something on config/config.php as below:
+
+```
+define('DB_HOST', "localhost");
+define('DB_USER', "root"); // INSERT YOUR OWN USER
+define('DB_PASSWORD', ""); // INSER YOUR OWN PASSWORD
+define('DB_NAME', "dimasyudha");
+```
+
+Next, you can run the project locally by typing the address below on your desire web browser.
 
 ```sh
 http://localhost/login.php
 ```
 
-Next, please insert the username & password as follows:
+Finally, please insert the username & password as follows:
 
 ```sh
 username: admin
