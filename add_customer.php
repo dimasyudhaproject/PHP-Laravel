@@ -51,11 +51,11 @@ require_once 'includes/header.php';
 $(document).ready(function(){
    $("#customer_form").validate({
        rules: {
-            f_name: {
+        judul_buku: {
                 required: true,
                 minlength: 3
             },
-            l_name: {
+        description: {
                 required: true,
                 minlength: 3
             },   

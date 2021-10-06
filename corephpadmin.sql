@@ -53,15 +53,13 @@ INSERT INTO `admin_accounts` (`id`, `user_name`, `password`, `series_id`, `remem
 
 CREATE TABLE `customers` (
   `id` int(10) NOT NULL,
-  `f_name` varchar(25) NOT NULL,
-  `l_name` varchar(25) NOT NULL,
-  `gender` varchar(6) DEFAULT NULL,
-  `address` varchar(100) DEFAULT NULL,
-  `city` varchar(15) DEFAULT NULL,
-  `state` varchar(30) DEFAULT NULL,
-  `phone` varchar(15) DEFAULT NULL,
-  `email` varchar(50) DEFAULT NULL,
-  `date_of_birth` date DEFAULT NULL,
+  `judul_buku` varchar(100) NOT NULL,
+  `description` varchar(100) NOT NULL,
+  `kategori` varchar(10) DEFAULT NULL,
+  `keyword` varchar(100) DEFAULT NULL,
+  `harga` int(10) DEFAULT NULL,
+  `stock` int(10) DEFAULT NULL,
+  `penerbit` varchar(10) DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -70,9 +68,13 @@ CREATE TABLE `customers` (
 -- Dumping data for table `customers`
 --
 
-INSERT INTO `customers` (`id`, `f_name`, `l_name`, `gender`, `address`, `city`, `state`, `phone`, `email`, `date_of_birth`, `created_at`, `updated_at`) VALUES
-(1, 'chetan', 'Shenai', 'female', 'waaw awf', NULL, 'Maharashtra', '99878', 'chetanshenai9@gmail.com', '2019-07-23', '2019-07-22 20:12:30', '2019-07-22 20:12:41'),
-(2, 'Cfree', 'wawfaf', 'male', 'piohh', NULL, 'Madhya pradesh', '09975342821', 'cgtarta@ll.com', '2020-10-14', '2020-10-24 15:46:45', '2020-10-24 15:46:53');
+INSERT INTO `customers` (`id`, `judul_buku`, `description`, `kategori`, `keyword`, `harga`, `stock`, `penerbit`, `created_at`, `updated_at`) VALUES
+(1, 'Kepemimpinan dan seni berbicara', 'Kita melakukannya setiap hari, tetapi bicara kepada orang-orang khususnya yang tidak kita kenal...', 'Umum', 'Kepemimpinan', '50000', '23', 'Gramedia', '2021-10-06 00:00:00', '2021-10-06 00:00:00'),
+(2, '7 Habits of Highly effective teens', 'Menjadi remaja itu asik sekaligus menantang. Dalam 7 Kebiasaan Remaja yang Sangat Efektif...', "Umum", 'Remaja', '74000', '245', 'Airlangga', '2021-10-06 00:00:00', '2021-10-06 00:00:00'),
+(3, 'Kepemimpinan dan seni berbicara', 'Kita melakukannya setiap hari, tetapi bicara kepada orang-orang khususnya yang tidak kita kenal...', 'Umum', 'Kepemimpinan', '50000', '23', 'Gramedia', '2021-10-06 00:00:00', '2021-10-06 00:00:00'),
+(4, '7 Habits of Highly effective teens', 'Menjadi remaja itu asik sekaligus menantang. Dalam 7 Kebiasaan Remaja yang Sangat Efektif...', "Umum", 'Remaja', '74000', '245', 'Airlangga', '2021-10-06 00:00:00', '2021-10-06 00:00:00'),
+(5, 'Kepemimpinan dan seni berbicara', 'Kita melakukannya setiap hari, tetapi bicara kepada orang-orang khususnya yang tidak kita kenal...', 'Umum', 'Kepemimpinan', '50000', '23', 'Gramedia', '2021-10-06 00:00:00', '2021-10-06 00:00:00'),
+(6, '7 Habits of Highly effective teens', 'Menjadi remaja itu asik sekaligus menantang. Dalam 7 Kebiasaan Remaja yang Sangat Efektif...',"Umum", 'Remaja', '74000', '245', 'Airlangga', '2021-10-06 00:00:00', '2021-10-06 00:00:00');
 
 --
 -- Indexes for dumped tables

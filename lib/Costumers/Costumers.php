@@ -21,12 +21,12 @@ class Costumers
     public function setOrderingValues()
     {
         $ordering = [
-            'id' => 'Judul',
-            'f_name' => 'Description',
-            'l_name' => 'Kategori',
-            'gender' => 'Keywords',
-            'phone' => 'Harga',
-            'created_at' => 'Penerbit'
+            'judul_buku' => 'Judul',
+            'description' => 'Description',
+            'kategori' => 'Kategori',
+            'keyword' => 'Keywords',
+            'harga' => 'Harga',
+            'penerbit' => 'Penerbit'
         ];
 
         return $ordering;

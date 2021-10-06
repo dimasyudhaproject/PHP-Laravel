@@ -5,7 +5,7 @@ require_once 'config/config.php';
 require_once BASE_PATH . '/includes/auth_validate.php';
 
 $db = getDbInstance();
-$select = array('id', 'f_name', 'l_name', 'gender', 'phone', 'created_at', 'updated_at');
+$select = array('id', 'judul_buku', 'description', 'kategori', 'keyword', 'harga', 'stock', 'penerbit', 'created_at', 'updated_at');
 
 
 $chunk_size = 100;

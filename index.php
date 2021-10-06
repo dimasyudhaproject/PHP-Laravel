@@ -13,7 +13,7 @@ $filter_col = filter_input(INPUT_GET, 'filter_col');
 $order_by = filter_input(INPUT_GET, 'order_by');
 
 // Per page limit for pagination.
-$pagelimit = 15;
+$pagelimit = 6;
 
 // Get current page.
 $page = filter_input(INPUT_GET, 'page');
@@ -26,18 +26,18 @@ if (!$filter_col) {
 	$filter_col = 'id';
 }
 if (!$order_by) {
-	$order_by = 'Desc';
+	$order_by = 'Asc';
 }
 
 //Get DB instance. i.e instance of MYSQLiDB Library
 $db = getDbInstance();
-$select = array('id', 'f_name', 'l_name', 'gender', 'phone', 'created_at', 'updated_at');
+$select = array('id', 'judul_buku', 'description', 'kategori', 'keyword', 'harga', 'stock', 'penerbit', 'created_at', 'updated_at');
 
 //Start building query according to input parameters.
 // If search string
 if ($search_string) {
-	$db->where('f_name', '%' . $search_string . '%', 'like');
-	$db->orwhere('l_name', '%' . $search_string . '%', 'like');
+	$db->where('judul_buku', '%' . $search_string . '%', 'like');
+	$db->orwhere('description', '%' . $search_string . '%', 'like');
 }
 
 //If order by option selected
@@ -85,7 +85,7 @@ endforeach;
         </form>
     </div>
     <hr>
-    <!-- //Filters -->
+    <!-- //Filters --
 
 
     <div id="export-section">
@@ -96,23 +96,28 @@ endforeach;
     <table class="table table-striped table-bordered table-condensed">
         <thead>
             <tr>
-                <th width="5%">No.</th>
-                <th width="45%">Judul Buku</th>
-                <th width="20%">Description</th>
-                <th width="20%">Kategori</th>
-                <th width="10%">Keywords</th>
-                <th width="10%">Harga</th>
-                <th width="10%">Stock</th>
-                <th width="10%">Penerbit</th>
+                <th style="text-align:center" width="1%">No.</th>
+                <th style="text-align:center" width="18%">Judul Buku</th>
+                <th style="text-align:center" width="42%">Description</th>
+                <th style="text-align:center" width="10%">Kategori</th>
+                <th style="text-align:center" width="10%">Keywords</th>
+                <th style="text-align:center" width="4%">Harga</th>
+                <th style="text-align:center" width="1%">Stock</th>
+                <th style="text-align:center" width="6%">Penerbit</th>
+                <th style="text-align:center" width="6.4%">Action</th>
             </tr>
         </thead>
         <tbody>
             <?php foreach ($rows as $row): ?>
             <tr>
                 <td><?php echo $row['id']; ?></td>
-                <td><?php echo xss_clean($row['f_name'] . ' ' . $row['l_name']); ?></td>
-                <td><?php echo xss_clean($row['gender']); ?></td>
-                <td><?php echo xss_clean($row['phone']); ?></td>
+                <td><?php echo xss_clean($row['judul_buku']); ?></td>
+                <td><?php echo xss_clean($row['description']); ?></td>
+                <td><?php echo xss_clean($row['kategori']); ?></td>
+                <td><?php echo xss_clean($row['keyword']); ?></td>
+                <td><?php echo xss_clean($row['harga']); ?></td>
+                <td><?php echo xss_clean($row['stock']); ?></td>
+                <td><?php echo xss_clean($row['penerbit']); ?></td>
                 <td>
                     <a href="edit_customer.php?customer_id=<?php echo $row['id']; ?>&operation=edit" class="btn btn-primary"><i class="glyphicon glyphicon-edit"></i></a>
                     <a href="#" class="btn btn-danger delete_btn" data-toggle="modal" data-target="#confirm-delete-<?php echo $row['id']; ?>"><i class="glyphicon glyphicon-trash"></i></a>
@@ -130,7 +135,7 @@ endforeach;
                             </div>
                             <div class="modal-body">
                                 <input type="hidden" name="del_id" id="del_id" value="<?php echo $row['id']; ?>">
-                                <p>Are you sure you want to delete this row?</p>
+                                <p>Are you sure you?</p>
                             </div>
                             <div class="modal-footer">
                                 <button type="submit" class="btn btn-default pull-left">Yes</button>
