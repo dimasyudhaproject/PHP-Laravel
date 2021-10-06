@@ -50,7 +50,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 				$db->update("admin_accounts", $update_remember);
 			}
 			//Authentication successfull redirect user
-			header('Location:index.php');
+			header('Location:customers.php');
 
 		} else {
 		

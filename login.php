@@ -6,7 +6,7 @@ $token = bin2hex(openssl_random_pseudo_bytes(16));
 // If User has already logged in, redirect to dashboard page.
 if (isset($_SESSION['user_logged_in']) && $_SESSION['user_logged_in'] === TRUE)
 {
-	header('Location:index.php');
+	header('Location:customers.php');
 }
 
 // If user has previously selected "remember me option": 
@@ -38,7 +38,7 @@ if (isset($_COOKIE['series_id']) && isset($_COOKIE['remember_token']))
 
 			$_SESSION['user_logged_in'] = TRUE;
 			$_SESSION['admin_type'] = $row['admin_type'];
-			header('Location:index.php');
+			header('Location:customers.php');
 			exit;
 		}
 		else
@@ -61,14 +61,14 @@ include BASE_PATH.'/includes/header.php';
 <div id="page-" class="col-md-4 col-md-offset-4">
 	<form class="form loginform" method="POST" action="authenticate.php">
 		<div class="login-panel panel panel-default">
-			<div class="panel-heading">Please Sign in</div>
+			<div class="panel-heading">Welome to dimasyudha's Panel</div>
 			<div class="panel-body">
 				<div class="form-group">
-					<label class="control-label">username</label>
+					<label class="control-label">Username</label>
 					<input type="text" name="username" class="form-control" required="required">
 				</div>
 				<div class="form-group">
-					<label class="control-label">password</label>
+					<label class="control-label">Password</label>
 					<input type="password" name="passwd" class="form-control" required="required">
 				</div>
 				<div class="checkbox">

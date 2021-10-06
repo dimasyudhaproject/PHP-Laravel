@@ -58,11 +58,11 @@ include BASE_PATH . '/includes/header.php';
 <div id="page-wrapper">
     <div class="row">
         <div class="col-lg-6">
-            <h1 class="page-header">Customers</h1>
+            <h1 class="page-header">Book Lists</h1>
         </div>
         <div class="col-lg-6">
             <div class="page-action-links text-right">
-                <a href="add_customer.php?operation=create" class="btn btn-success"><i class="glyphicon glyphicon-plus"></i> Add new</a>
+                <a href="add_customer.php?operation=create" class="btn btn-success"><i class="glyphicon glyphicon-plus"></i> Add</a>
             </div>
         </div>
     </div>
@@ -71,9 +71,8 @@ include BASE_PATH . '/includes/header.php';
     <!-- Filters -->
     <div class="well text-center filter-form">
         <form class="form form-inline" action="">
-            <label for="input_search">Search</label>
+            <label for="input_search ">Keyword</label>
             <input type="text" class="form-control" id="input_search" name="search_string" value="<?php echo xss_clean($search_string); ?>">
-            <label for="input_order">Order By</label>
             <select name="filter_col" class="form-control">
                 <?php
 foreach ($costumers->setOrderingValues() as $opt_value => $opt_name):
@@ -82,19 +81,7 @@ foreach ($costumers->setOrderingValues() as $opt_value => $opt_name):
 endforeach;
 ?>
             </select>
-            <select name="order_by" class="form-control" id="input_order">
-                <option value="Asc" <?php
-if ($order_by == 'Asc') {
-	echo 'selected';
-}
-?> >Asc</option>
-                <option value="Desc" <?php
-if ($order_by == 'Desc') {
-	echo 'selected';
-}
-?>>Desc</option>
-            </select>
-            <input type="submit" value="Go" class="btn btn-primary">
+            <input type="submit" value="Search" class="btn btn-primary">
         </form>
     </div>
     <hr>
@@ -102,18 +89,21 @@ if ($order_by == 'Desc') {
 
 
     <div id="export-section">
-        <a href="export_customers.php"><button class="btn btn-sm btn-primary">Export to CSV <i class="glyphicon glyphicon-export"></i></button></a>
+        <a href="export_customers.php"><button class="btn btn-sm btn-primary">Export <i class="glyphicon glyphicon-export"></i></button></a>
     </div>
 
     <!-- Table -->
     <table class="table table-striped table-bordered table-condensed">
         <thead>
             <tr>
-                <th width="5%">ID</th>
-                <th width="45%">Name</th>
-                <th width="20%">Gender</th>
-                <th width="20%">Phone</th>
-                <th width="10%">Actions</th>
+                <th width="5%">No.</th>
+                <th width="45%">Judul Buku</th>
+                <th width="20%">Description</th>
+                <th width="20%">Kategori</th>
+                <th width="10%">Keywords</th>
+                <th width="10%">Harga</th>
+                <th width="10%">Stock</th>
+                <th width="10%">Penerbit</th>
             </tr>
         </thead>
         <tbody>
